@@ -1,2 +1,3 @@
-# image_search
-Created with CodeSandbox
+# Simple Image Search
+
+Created with CodeSandbox by Chris Neal
