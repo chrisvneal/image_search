@@ -10,7 +10,7 @@ class SearchBar extends React.Component {
 
     let searchTerm = this.state.term;
 
-    console.log(searchTerm);
+    this.props.onSubmit(searchTerm);
   };
 
   render() {
