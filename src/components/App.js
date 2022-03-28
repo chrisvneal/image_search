@@ -3,16 +3,17 @@ import unsplash from "../api/unsplash";
 import SearchBar from "./SearchBar";
 
 class App extends React.Component {
+  // state objects stores application data
   state = { images: [] };
 
+  // onSearchSubmit invoked when search term is submitted
   onSearchSubmit = async (term) => {
-    const response = await unsplash.get(
-      "https://api.unsplash.com/search/photos",
-      {
-        params: { query: term }
-      }
-    );
+    // request data from the Unsplash API, capture in variable
+    const response = await unsplash.get("search/photos", {
+      params: { query: term }
+    });
 
+    // store response in stabe object by using its setState() function and the API response
     this.setState({ images: response.data.results });
   };
 

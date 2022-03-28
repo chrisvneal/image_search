@@ -4,13 +4,12 @@ class SearchBar extends React.Component {
   state = {
     term: ""
   };
-
+  // when this form is submitted...
   onFormSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault(); // prevent default behavior
 
-    let searchTerm = this.state.term;
-
-    this.props.onSubmit(searchTerm);
+    // ... submit whole term to function in App component
+    this.props.onSubmit(this.state.term);
   };
 
   render() {
@@ -22,6 +21,7 @@ class SearchBar extends React.Component {
             <input
               type="text"
               value={this.state.term}
+              // when input field changes, store changes in state object
               onChange={(e) => this.setState({ term: e.target.value })}
             />
           </div>
