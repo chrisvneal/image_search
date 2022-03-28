@@ -14,7 +14,7 @@ class App extends React.Component {
       params: { query: term }
     });
 
-    // store response in stabe object by using its setState() function and the API response
+    // store response in state object by using its setState() function and the API response
     this.setState({ images: response.data.results });
   };
 
